@@ -7,7 +7,7 @@ algorithm-python
 ## 사용 방법
 
 ### 문제 다운로드 
-./template.py HELLOWORLD
+./template.py HELLOWORLD 와 같이 문제명을 입력하면 
 algospot에서 해당 문제를 받아와서 동일한 이름의 directory에 input.dat 와 answer.dat를 생성합니다.
 
 
