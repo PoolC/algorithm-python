@@ -1,0 +1,649 @@
+
+
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+	<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+		<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+			<!--[if (gt IE 9)|!(IE)]><!--> 
+<html lang="en" class="no-js"> <!--<![endif]-->
+	<head>
+		<title>algospot.com ::
+	HELLOWORLD
+</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+		<!-- CSS Styles -->
+		<link rel="stylesheet" href="/static/css/style.css">
+		<link rel="stylesheet" href="/static/css/colors.css">
+		<link rel="stylesheet" href="/static/css/algospot.css">
+		<link rel="stylesheet" href="/static/css/code.css">
+		<link rel="stylesheet" href="/static/css/jquery.tipsy.css">
+		<link rel="stylesheet" href="/static/css/jquery.wysiwyg.css">
+		<link rel="stylesheet" href="/static/css/jquery.datatables.css">
+		<link rel="stylesheet" href="/static/css/jquery.nyromodal.css">
+		<link rel="stylesheet" href="/static/css/jquery.datepicker.css">
+		<link rel="stylesheet" href="/static/css/jquery.fileinput.css">
+		<link rel="stylesheet" href="/static/css/jquery.fullcalendar.css">
+		<link rel="stylesheet" href="/static/css/jquery.visualize.css">
+
+		<!-- Google WebFonts -->
+		<link href='//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+		<script src="/static/js/ace/ace.js"></script>
+		<script src="/static/js/libs/modernizr-1.7.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>!window.jQuery && document.write(unescape('%3Cscript src="/static/js/jquery/jquery-1.7.2.min.js"%3E%3C/script%3E'))</script>
+		<script type="text/javascript">
+
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-7621581-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+			 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			 })();
+
+		</script>
+	</head>
+
+	<!-- Add class .fixed for fixed layout. You would need also edit CSS file for width -->
+	<body class="fixed">
+
+		<!-- Fixed Layout Wrapper -->
+		<div class="fixed-wraper">
+
+			<!-- Aside Block -->
+			<section role="navigation" class="navigation">
+				<!-- Header with logo and headline -->
+				<header>
+					<a href="/" title="처음으로"></a>
+					<h1>SINCE 2007</h1>
+				</header>
+
+				<!-- User Info -->
+				<section id="user-info">
+					
+						<img src="/static/images/unknown-user.png" alt="Not logged in yet">
+						<div>
+							<em class="kor">로그인하세요.</em>
+							<ul>
+								
+								
+								<li><a class="button-link" href="/accounts/login/?next=/judge/problem/read/HELLOWORLD" title="로그인" rel="tooltip">sign in</a></li>
+								
+								<li><a class="button-link" href="/accounts/register/" title="회원 가입" rel="tooltip">sign up</a></li>
+							</ul>
+						</div>
+					
+				</section>
+				<!-- /User Info -->
+
+				<!-- Main Navigation -->
+				<nav id="main-nav" class="kor">
+					<ul>
+						<li class="">
+							<a href="/newsfeed/" class="no-submenu">
+								뉴스 피드
+							</a>
+						</li>
+						<li class="">
+							<a href="/forum/all/1/">
+								포럼
+							</a>
+							<ul>
+								
+									<li class="">
+										<a href="/forum/list/news/1/">뉴스</a>
+									</li>
+								
+									<li class="">
+										<a href="/forum/list/free/1/">자유게시판</a>
+									</li>
+								
+									<li class="">
+										<a href="/forum/list/qna/1/">질문과 답변</a>
+									</li>
+								
+									<li class="">
+										<a href="/forum/list/old/1/">과거 게시판</a>
+									</li>
+								
+							</ul>
+						</li>
+						<li class="" >
+							<a href="/wiki/read/Main_Page" class="no-submenu">
+								위키
+							</a>
+						</li>
+						<li class="current">
+							<a href="/judge/problem/list/" class="">
+								온라인 저지
+							</a>
+							<ul>
+								<li class="current">
+									<a href="/judge/problem/list/">
+										문제 풀기
+									</a>
+								</li>
+								
+								<li class=""><a href="/judge/submission/recent/">
+										최근 제출된 답안
+									</a>
+								</li>
+								<li class="">
+									<a href="/judge/ranking/">
+										사용자 랭킹
+									</a>
+								</li>
+								<!--<li>-->
+								<!--	<a href="/">-->
+								<!--		대회-->
+								<!--	</a>-->
+								<!--</li>-->
+								<li>
+									<a href="/wiki/read/%EC%95%8C%EA%B3%A0%EC%8A%A4%ED%8C%9F_%EC%98%A8%EB%9D%BC%EC%9D%B8_%EC%A0%80%EC%A7%80">
+										튜토리얼
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class=""><a href="/calendar/" class="no-submenu">캘린더</a></li>
+						
+					</ul>
+				</nav>
+				<!-- /Main Navigation -->
+
+				<!-- Search -->
+				<section id="search">
+					<form method="get" action="/search/">
+						<input name="q" id="search_query" placeholder="검색하기"/>
+					</form>
+				</section>
+				<!-- /Search -->
+				
+				<!--Sidebar -->
+				<section class="sidebar nested" id="calendar_upcoming">
+					<h2>다가오는 이벤트들</h2>
+					<span id="calendar_events_container">
+						<p class="template">
+							<a href="#" class="anchor"></a>
+							<span class="starttime"></span>
+						</p>
+					<!-- <p class="separator"><a href="#">TCO11 Marathon Match R3</a> (6/30)</p> -->
+					<!-- <p>TCO11 Marathon Match R3 (6/30)</p> -->
+					<!-- <p class="separator">SRM 511 (7/2 11:00 AM)</p> -->
+					<!-- <p class="separator">TCO11 Online Round 3 (7/9 11:00 AM)</p> -->
+					<!-- <p class="separator">SRM 512 (7/13 10:00 AM)</p> -->
+					<!-- <p class="separator">TCO11 Online Round 4 (7/23 11:00 AM)</p> -->
+					<!-- <p class="separator">SRM 513 (7/26 6:00 AM)</p> -->
+					<!-- <p class="separator">TCO11 Online Round 5 (8/6 11:00 AM)</p> -->
+					<!-- <p class="separator">SRM 514 (8/9 8:00 PM)</p> -->
+					<!-- <p class="separator">SRM 515 (8/20 11:00 AM)</p> -->
+					</span>
+					<a class="button-link" href="/calendar/" title="See all events!">see all</a>
+				</section>
+				<section class="sidebar feed">
+
+					<a href="/feed/posts/"><img src="/static/images/rss.png"/></a>
+				</section>
+				<!-- /Sidebar -->
+			</section>
+
+			<!-- /Aside Block -->
+
+			<!-- Main Content -->
+			<section role="main" id="main_section">
+
+				<!-- Full Content Block -->
+				<!-- Note that only 1st article need clearfix class for clearing -->
+				<article class="full-block clearfix">
+
+					<!-- Article Container for safe floating -->
+					<div class="article-container">
+
+						<!-- Article Header -->
+						<header>
+							<h2>
+	Hello World!
+</h2>
+							<!-- Article Header Tab Navigation -->
+							
+	<nav>
+		<ul class="tab-switch">
+			<li>
+				<a class="current" href="/judge/problem/read/HELLOWORLD" rel="tooltip" title="Read problem">
+					문제
+				</a>
+			</li>
+			<li>
+				<a class="" href="/judge/problem/submit/HELLOWORLD" rel="tooltip" title="Submit a solution">
+					답안 제출
+				</a>
+			</li>
+			<li>
+				<a class="" href="/judge/problem/stat/HELLOWORLD/" rel="tooltip" title="Problem statistics">
+					통계
+				</a>
+			</li>
+			
+		</ul>
+	</nav>
+
+							<!-- /Article Header Tab Navigation -->
+						</header>
+						<!-- /Article Header -->
+
+						<!-- Article Content -->
+						
+	
+	
+
+
+<section class="problem_info">
+	<h4>문제 정보</h4>
+	<ul class="problem_info tabular">
+		<li class="header">
+			<ul>
+				<li class="problemid">문제 ID</li>
+				<li class="timelimit">시간 제한</li>
+				<li class="memorylimit">메모리 제한</li>
+				<li class="submissions">제출 횟수</li>
+				<li class="accepted">정답 횟수 (비율)</li>
+			</ul>
+		</li>
+		<li class="content">
+			<ul>
+				<li class="problem-id"><a href="/judge/problem/read/HELLOWORLD">HELLOWORLD</a></li>
+				<li class="timelimit"><b>1000</b>ms</li>
+				<li class="memorylimit"><b>65536</b>kb</li>
+				<li class="submissions"><a href="/judge/submission/recent/?problem=HELLOWORLD"><b>4331</b></a></li>
+				<li class="accepted"><a href="/judge/problem/stat/HELLOWORLD/"><b>2114</b> (<b>48</b>%)</a></li>
+			</ul>
+		</li>
+		<li class="header">
+			<ul>
+				<li class="author">출제자</li>
+				<li class="source">출처</li>
+				<li class="category">분류</li>
+			</ul>
+		</li>
+		<li class="content">
+			<ul>
+				<li class="author"><a href="/user/profile/2" class="username">JongMan</a></li>
+				<li class="source"><a href="/judge/problem/list/?source=%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC">튜토리얼</a></li>
+				<li class="category">
+					<a href="#" id="show_category">보기</a>
+					
+					<span id="problem_category" style="display: none;">
+						
+						<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+						
+					</span>
+				</li>
+			</ul>
+			<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+		</li>
+		
+	</ul>
+</section>
+
+	<section class="problem_statement">
+		<h4>문제</h4>
+		<p class="kor">
+			<p>예의 바른 프로그래머들은 인사를 잘 합니다. 프로그래밍 언어를 배우면서 처음으로 짜는 프로그램이 항상 Hello World! 인 것만 봐도 알 수 있지요. AOJ 의 첫 문제에서도 예외가 아닙니다. 인사할 사람들의 이름을 입력받고, 그들에게 각각 인사하는 프로그램을 짜 봅시다.</p>
+
+		</p>
+	</section>
+	<section class="problem_input">
+		<h4>입력</h4>
+		<p class="kor">
+			<p>프로그램은 표준 입력에서 인사할 사람들의 이름을 입력받습니다. 입력의 첫 줄에는 사람의 수 C (1 &lt;= C &lt;= 50) 이 주어집니다. 그 후 한 줄에 하나씩 각 사람의 이름이 주어집니다. 각 사람의 이름은 알파벳 대소문자나 숫자로만 구성되어 있으며, 항상 50자 이하입니다.</p>
+
+		</p>
+	</section>
+	<section class="problem_output">
+		<h4>출력</h4>
+		<p class="kor">
+			<p>한 줄에 하나씩, 입력에 주어진 순서대로 각 사람에게 인사 메시지를 출력합니다. 자세한 것은 예제 출력을 참조하세요.</p>
+
+		</p>
+	</section>
+	<section class="problem_sample_input">
+		<h4>예제 입력</h4>
+		<pre>5
+World
+Algospot
+Illu
+Jullu
+Kodori</pre>
+	</section>
+	<section class="problem_sample_output">
+		<h4>예제 출력</h4>
+		<pre>Hello, World!
+Hello, Algospot!
+Hello, Illu!
+Hello, Jullu!
+Hello, Kodori!</pre>
+	</section>
+	<section class="problem_note">
+		<h4>노트</h4>
+		<p class="kor">
+			
+		</p>
+	</section>
+
+
+						<!-- Article Footer -->
+
+						<footer>
+						</footer>
+						<!-- /Article Footer -->
+
+					</div>
+					<!-- /Article Container -->
+
+				</article>
+				<!-- /Full Content Block -->
+
+				
+	
+		
+
+
+<article class="full-block">
+	<div class="article-container">
+		
+		<section class="kor">
+			
+			<h5>
+				
+					<a href="javascript:;" id="toggle_comments">
+				
+					9개의 댓글이 있습니다.
+				
+					</a>
+				
+			</h5>
+			<ul id="comment_list" class="comments background-color" style="display: none;">
+				
+				<li class="comment">
+					<a name="c9780" id="c9780"></a>
+					<dl>
+						<dt class="comment_user">
+							<img src="/static/images/unknown-user.png" alt="m47340" width="45" height="45" /><br/>
+							<a href="/user/profile/5629" class="username">m47340</a>
+						</dt>
+						<dd class="comment_content">
+							<p>느낌표 안 써서 틀림</p>
+
+							<br/>
+							<span class="datetime"><span class="" title="2013/09/04 14:27">10달 전</span></span>
+							<span class="operations">
+								<a href="#c9780" class="button-link gray">link</a>
+								
+							</span>
+						</dd>
+					</dl>
+				</li>
+				
+				
+				<li class="comment">
+					<a name="c9781" id="c9781"></a>
+					<dl>
+						<dt class="comment_user">
+							<img src="/media/avatars/Kureyo/resized/45/%EA%B7%B8%EB%9E%98%EC%9A%94%EC%A0%95%EB%A7%90%EA%B7%B8%EB%9E%98%EC%9A%94.jpg" alt="Kureyo" width="45" height="45" /><br/>
+							<a href="/user/profile/19" class="username">Kureyo</a>
+						</dt>
+						<dd class="comment_content">
+							<p>그런점들때문에 문제의 정답률은 의외로 낮은편입니다(...)</p>
+
+							<br/>
+							<span class="datetime"><span class="" title="2013/09/04 14:31">10달 전</span></span>
+							<span class="operations">
+								<a href="#c9781" class="button-link gray">link</a>
+								
+							</span>
+						</dd>
+					</dl>
+				</li>
+				
+				
+				<li class="comment">
+					<a name="c10507" id="c10507"></a>
+					<dl>
+						<dt class="comment_user">
+							<img src="/static/images/unknown-user.png" alt="xglove1" width="45" height="45" /><br/>
+							<a href="/user/profile/7289" class="username">xglove1</a>
+						</dt>
+						<dd class="comment_content">
+							<p>흠 이거 문제 풀고나서 화났어요;;;<br>
+예제입력처럼 입력이 끝나고 난 다음 모두 출력하는 문제처럼 예제들이 보여서 그렇게 풀다가.... 정답을 맞추고 난 후 멘붕...</p>
+
+							<br/>
+							<span class="datetime"><span class="" title="2013/12/29 16:26">6달 전</span></span>
+							<span class="operations">
+								<a href="#c10507" class="button-link gray">link</a>
+								
+							</span>
+						</dd>
+					</dl>
+				</li>
+				
+				
+				<li class="comment">
+					<a name="c10808" id="c10808"></a>
+					<dl>
+						<dt class="comment_user">
+							<img src="/static/images/unknown-user.png" alt="sunzer09" width="45" height="45" /><br/>
+							<a href="/user/profile/7823" class="username">sunzer09</a>
+						</dt>
+						<dd class="comment_content">
+							<p>컴파일 성공시키는게 더 어렵네요.</p>
+
+							<br/>
+							<span class="datetime"><span class="" title="2014/02/06 16:22">4달 전</span></span>
+							<span class="operations">
+								<a href="#c10808" class="button-link gray">link</a>
+								
+							</span>
+						</dd>
+					</dl>
+				</li>
+				
+				
+				<li class="comment">
+					<a name="c10835" id="c10835"></a>
+					<dl>
+						<dt class="comment_user">
+							<img src="/static/images/unknown-user.png" alt="BlueLizard" width="45" height="45" /><br/>
+							<a href="/user/profile/7968" class="username">BlueLizard</a>
+						</dt>
+						<dd class="comment_content">
+							<p>앜ㅋㅋㅋㅋ 느낌표..</p>
+
+							<br/>
+							<span class="datetime"><span class="" title="2014/02/19 13:15">4달 전</span></span>
+							<span class="operations">
+								<a href="#c10835" class="button-link gray">link</a>
+								
+							</span>
+						</dd>
+					</dl>
+				</li>
+				
+				
+				<li class="comment">
+					<a name="c10870" id="c10870"></a>
+					<dl>
+						<dt class="comment_user">
+							<img src="/media/avatars/EugeneChung/resized/45/1779913_10152241326982491_794607293_n.jpg" alt="EugeneChung" width="45" height="45" /><br/>
+							<a href="/user/profile/8136" class="username">EugeneChung</a>
+						</dt>
+						<dd class="comment_content">
+							<p>출력만 보면 입력값들을 list에 담았다가 찍는 것처럼 보였는데 예제 코드들을 보니까 그게 아니네요.</p>
+
+<p>2<br>
+hi<br>
+Hello, hi!<br>
+hehe<br>
+Hello, hehe!</p>
+
+<p>출력 예제가 바뀌어야 하지 않을까 싶어요.</p>
+
+							<br/>
+							<span class="datetime"><span class="" title="2014/03/06 07:28">3달 전</span></span>
+							<span class="operations">
+								<a href="#c10870" class="button-link gray">link</a>
+								
+							</span>
+						</dd>
+					</dl>
+				</li>
+				
+				
+				<li class="comment">
+					<a name="c11020" id="c11020"></a>
+					<dl>
+						<dt class="comment_user">
+							<img src="/media/avatars/greentec/resized/45/1334327588324.jpg" alt="greentec" width="45" height="45" /><br/>
+							<a href="/user/profile/7606" class="username">greentec</a>
+						</dt>
+						<dd class="comment_content">
+							<p>파이썬이 원래 이렇게 느린가요? ㅠㅠ</p>
+
+							<br/>
+							<span class="datetime"><span class="" title="2014/04/01 20:07">3달 전</span></span>
+							<span class="operations">
+								<a href="#c11020" class="button-link gray">link</a>
+								
+							</span>
+						</dd>
+					</dl>
+				</li>
+				
+				
+				<li class="comment">
+					<a name="c11272" id="c11272"></a>
+					<dl>
+						<dt class="comment_user">
+							<img src="/static/images/unknown-user.png" alt="verimuch" width="45" height="45" /><br/>
+							<a href="/user/profile/9279" class="username">verimuch</a>
+						</dt>
+						<dd class="comment_content">
+							<p>저도 입력받은 이름들 list에 넣었다가 한번에 보여주고 틀렸네요;;</p>
+
+							<br/>
+							<span class="datetime"><span class="" title="2014/05/28 18:24">1달 전</span></span>
+							<span class="operations">
+								<a href="#c11272" class="button-link gray">link</a>
+								
+							</span>
+						</dd>
+					</dl>
+				</li>
+				
+				
+				<li class="comment">
+					<a name="c11273" id="c11273"></a>
+					<dl>
+						<dt class="comment_user">
+							<img src="/media/avatars/Being/resized/45/%EC%82%AC%EC%A7%84.JPG" alt="Being" width="45" height="45" /><br/>
+							<a href="/user/profile/24" class="username">Being</a>
+						</dt>
+						<dd class="comment_content">
+							<p><a href="/wiki/read/%EC%95%8C%EA%B3%A0%EC%8A%A4%ED%8C%9F_%EC%98%A8%EB%9D%BC%EC%9D%B8_%EC%A0%80%EC%A7%80/%EC%B2%AB_%EB%B2%88%EC%A7%B8_%EB%AC%B8%EC%A0%9C_%ED%92%80%EA%B8%B0">알고스팟 온라인 저지/첫 번째 문제 풀기</a> 항목을 참고하시기 바랍니다. 입력받은 것을 한 번에 출력하든 아니든 전혀 상관없습니다. verimuch님의 소스 코드를 보아서는 모아서 출력하던 것을 바로바로 출력하게 바꾸신 것만 수정하신 것은 아닌데, 단정적으로 잘못 생각하시는 것은 위험합니다.</p>
+
+							<br/>
+							<span class="datetime"><span class="" title="2014/05/28 18:56">1달 전</span></span>
+							<span class="operations">
+								<a href="#c11273" class="button-link gray">link</a>
+								
+							</span>
+						</dd>
+					</dl>
+				</li>
+				
+				
+				
+				<li class="comment">
+					<p>
+						댓글을 남기시려면 <a href="/accounts/login/">로그인</a>하세요.
+					</p>
+				</li>
+				
+			</ul>
+		</section>
+	</div>
+</article>
+
+<script language="javascript">
+	$(function() {
+		$("#toggle_comments").click(function(e) {
+			e.stopPropagation();
+			e.preventDefault();
+			$("#comment_list").slideToggle();
+			return false;
+		});
+		if(window.location.hash) {
+			$("#comment_list").show();
+			var hash = window.location.hash;
+			var target_top = $(hash).offset().top;
+			$("html, body").animate({scrollTop: target_top}, 500);
+		}
+	});
+</script>
+
+
+	
+
+
+			</section>
+			<!-- /Main Content -->
+
+		</div>
+		<!-- /Fixed Layout Wrapper -->
+
+		<!-- JS Libs at the end for faster loading -->
+		<script src="/static/js/libs/selectivizr.js"></script>
+		<script src="/static/js/jquery/jquery.nyromodal.js"></script>
+		<script src="/static/js/jquery/jquery.tipsy.js"></script>
+		<script src="/static/js/jquery/jquery.wysiwyg.js"></script>
+		<script src="/static/js/jquery/jquery.datatables.js"></script>
+		<script src="/static/js/jquery/jquery.datepicker.js"></script>
+		<script src="/static/js/jquery/jquery.fileinput.js"></script>
+		<script src="/static/js/jquery/jquery.fullcalendar.min.js"></script>
+		<script src="/static/js/jquery/excanvas.js"></script>
+		<script src="/static/js/jquery/jquery.visualize.js"></script>
+		<script src="/static/js/jquery/jquery.visualize.tooltip.js"></script>
+		<script src="/static/js/jquery/superbly-tagfield.min.js"></script>
+		<script src="/static/js/jquery/jquery.cookie.js"></script>
+		<script src="/static/js/jquery/jquery.tools.overlay.min.js"></script>
+		<script src="/static/js/sundown.js"></script>
+		<script src="/static/js/script.js"></script>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+				extensions: [],
+				jax: ["input/TeX", "output/HTML-CSS"],
+				preRemoveClass: "mathjax-preview",
+				"HTML-CSS": { availableFonts: ["TeX"] }
+			});
+		</script>
+		<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js"></script>
+
+	</body>
+</html>
