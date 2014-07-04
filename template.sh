@@ -35,11 +35,11 @@ HTML_CONTENT=$(cat ${PROBLEM_NAME})
 # parse 
 INPUT=${HTML_CONTENT#*problem_sample_input*<pre>}
 INPUT=${INPUT%%</pre>*}
-echo "${INPUT}" > ${PROBLEM_PATH}/input.dat
+echo "${INPUT}" | sed -e 's/^ *//' -e 's/ *$//' > ${PROBLEM_PATH}/input.dat
 
 OUTPUT=${HTML_CONTENT#*problem_sample_output*<pre>}
 OUTPUT=${OUTPUT%%</pre>*}
-echo "${OUTPUT}" > ${PROBLEM_PATH}/answer.dat
+echo "${OUTPUT}" | sed -e 's/^ *//' -e 's/ *$//' > ${PROBLEM_PATH}/answer.dat
 
 #ln -s ${SCRIPT_PATH}/run.sh ${PROBLEM_PATH}
 cp ${SCRIPT_PATH}/run.sh ${PROBLEM_PATH}
