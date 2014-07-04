@@ -1,7 +1,6 @@
 #!/bin/bash
-#created 2014-06-30
-ECHO_USAGE=0
-PROBLEM_NAME=$1
+
+PROBLEM_NAME=`echo "$1" | tr [:lower:] [:upper:]`
 SAVE_PATH=./
 SCRIPT_PATH=./_script
 PROBLEM_PATH=${SAVE_PATH}/`echo "${PROBLEM_NAME}" | tr [:upper:] [:lower:]`

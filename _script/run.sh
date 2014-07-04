@@ -1,6 +1,4 @@
 #!/bin/bash
-#created 2014-06-30
-ECHO_USAGE=0
 RUN_SCRIPT=$1
 DATA_DATA=$2
 ANSWER_DATA=$3
