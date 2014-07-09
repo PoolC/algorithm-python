@@ -110,4 +110,3 @@ run.sh의 출력결과는 output.dat에 저장 되며, 실행할 스크립트를
  1,5c1,5 < Hello, World! < Hello, Algospot! < Hello, Illu! < Hello, Jullu! < Hello, Kodori! --- > Bye, World! > Bye, Algospot! > Bye, Illu! > Bye, Jullu! > Bye, Kodori!
 ```
 
-
