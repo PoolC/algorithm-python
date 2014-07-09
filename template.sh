@@ -2,7 +2,7 @@
 
 PROBLEM_NAME=`echo "$1" | tr [:lower:] [:upper:]`
 SAVE_PATH=./
-SCRIPT_PATH=./_script
+SCRIPT_PATH=_script
 PROBLEM_PATH=${SAVE_PATH}/`echo "${PROBLEM_NAME}" | tr [:upper:] [:lower:]`
 
 echo_usage () {
@@ -43,8 +43,8 @@ OUTPUT=${OUTPUT%%</pre>*}
 echo "${OUTPUT}" > ${PROBLEM_PATH}/answer.dat
 perl -pi -e 's/^\n//' ${PROBLEM_PATH}/answer.dat
 
-#ln -s ${SCRIPT_PATH}/run.sh ${PROBLEM_PATH}
-cp ${SCRIPT_PATH}/run.sh ${PROBLEM_PATH}
+# caution ! ../_script
+ln -s ../${SCRIPT_PATH}/run.sh ${PROBLEM_PATH}/run.sh
 cp ${SCRIPT_PATH}/solution.py ${PROBLEM_PATH}
+mv $PROBLEM_NAME ${PROBLEM_PATH}/${PROBLEM_NAME}.html
 
-rm -f $PROBLEM_NAME
