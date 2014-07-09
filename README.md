@@ -110,3 +110,31 @@ run.sh의 출력결과는 output.dat에 저장 되며, 실행할 스크립트를
  1,5c1,5 < Hello, World! < Hello, Algospot! < Hello, Illu! < Hello, Jullu! < Hello, Kodori! --- > Bye, World! > Bye, Algospot! > Bye, Illu! > Bye, Jullu! > Bye, Kodori!
 ```
 
+## 정답 제출
+
+poolc_push.sh 에서 script 이름을 수정하자 
+https://github.com/PoolC/algospot 에 자동으로 push가 된다. 
+다만 _poolc 경로에 https://github.com/PoolC/algospot 를 미리 checkout 받아두어야 하는 점에 주의하자
+.git/config 파일에 github_id 와 github_pw 를 @: 로 구분하여 넣어주면 ID PW 저장이 가능하다 
+Ex. url = https://[github_ID]:[github_PW]@github.com/PoolC/algospot
+
+### ./algorithm-python$ ./poolc_push.sh boardcover
+```bash
+ Already up-to-date.
+ # On branch master
+ # Changes to be committed:
+ #   (use "git reset HEAD <file>..." to unstage)
+ #
+ #       new file:   BOARDCOVER/doodoori2.py
+ #
+ [master e3960b1] BOARDCOVER doodoori2.py
+  1 file changed, 96 insertions(+)
+  create mode 100755 BOARDCOVER/doodoori2.py
+  Username for 'https://github.com': doodoori2
+  Password for 'https://doodoori2@github.com':
+  To https://github.com/PoolC/algospot
+     7fc5720..e3960b1  master -> master
+ # On branch master
+ 		nothing to commit (working directory clean)
+```
+

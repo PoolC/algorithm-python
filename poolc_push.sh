@@ -40,17 +40,17 @@ if [ ! -f "$PROBLEM_SOLUTION_FILENAME" ]; then
 fi
 
 #1 pull
-pushd $GITHUB_PATH
+pushd $GITHUB_PATH > /dev/null
 git pull
-popd 
+popd > /dev/null
 
 mkdir -p $GITHUB_PATH/$PROBLEM_NAME
 
 cp ${PROBLEM_SOLUTION_FILENAME} $GITHUB_PATH/$PROBLEM_NAME/${SUBMIT_FILENAME}
-pushd $GITHUB_PATH
+pushd $GITHUB_PATH > /dev/null
 git add ./$PROBLEM_NAME/${SUBMIT_FILENAME}
 git status
 git commit -m "${PROBLEM_NAME} ${COMMIT_LOG}"
 git push
 git status
-popd 
+popd > /dev/null
