@@ -40,6 +40,7 @@ if [ ! -f "$ANSWER_DATA" ]; then
 fi
 
 ./$RUN_SCRIPT < $DATA_DATA > $OUTPUT_DATA
+echo "./$RUN_SCRIPT < $DATA_DATA > $OUTPUT_DATA"
 DIFF=`diff $OUTPUT_DATA $ANSWER_DATA`
 
 if [ -z "$DIFF" ]; then
