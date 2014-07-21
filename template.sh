@@ -33,6 +33,14 @@ perl -pi -e 's/\r//' ${PROBLEM_NAME}
 HTML_CONTENT=$(cat ${PROBLEM_NAME})
 
 # parse 
+PROBLEM_STATEMENT=${HTML_CONTENT#*problem_statement}
+PROBLEM_STATEMENT=${PROBLEM_STATEMENT%%problem_sample_input*}
+PROBLEM_STATEMENT=${PROBLEM_STATEMENT%section>*}
+echo "<section class=\"problem_statement" > ${PROBLEM_PATH}/problem.html
+echo "${PROBLEM_STATEMENT}" >> ${PROBLEM_PATH}/problem.html
+echo "section>" >> ${PROBLEM_PATH}/problem.html
+#perl -pi -e 's/^\n//' ${PROBLEM_PATH}/problem.html
+
 INPUT=${HTML_CONTENT#*problem_sample_input*<pre>}
 INPUT=${INPUT%%</pre>*}
 echo "${INPUT}" > ${PROBLEM_PATH}/input.dat
