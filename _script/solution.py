@@ -12,11 +12,14 @@ else:
     rl = lambda: sys.stdin.readline()
 
 def main():
+    n = int(rl())
     for i in range(n):
         print "Hello, %s!" % rl().strip()
+#        input_cnt = int(rl())
+#        input_list = map(int, rl().split())
+
 
 if __name__ == "__main__":
-    n = int(rl())
     main()
     if IS_DEBUG and type(f) == file:
         f.close()
