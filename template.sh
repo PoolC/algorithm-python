@@ -1,9 +1,10 @@
 #!/bin/bash
 
 PROBLEM_NAME=`echo "$1" | tr [:lower:] [:upper:]`
-SAVE_PATH=./
+SAVE_PATH=./problems/
 SCRIPT_PATH=_script
 PROBLEM_PATH=${SAVE_PATH}/`echo "${PROBLEM_NAME}" | tr [:upper:] [:lower:]`
+TMP_PROBLEM_FILE=${PROBLEM_PATH}/.tmp
 
 echo_usage () {
 	SCRIPT="$(basename "$0")"
@@ -27,10 +28,10 @@ fi
 mkdir -p $PROBLEM_PATH
 
 URL=http://algospot.com/judge/problem/read/${PROBLEM_NAME}
-wget $URL -q
-perl -pi -e 's/[ ]*$//' ${PROBLEM_NAME}
-perl -pi -e 's/\r//' ${PROBLEM_NAME}
-HTML_CONTENT=$(cat ${PROBLEM_NAME})
+wget $URL -q -O ${TMP_PROBLEM_FILE}
+perl -pi -e 's/[ ]*$//' ${TMP_PROBLEM_FILE}
+perl -pi -e 's/\r//' ${TMP_PROBLEM_FILE}
+HTML_CONTENT=$(cat ${TMP_PROBLEM_FILE})
 
 # parse 
 PROBLEM_STATEMENT=${HTML_CONTENT#*problem_statement}
@@ -54,5 +55,5 @@ perl -pi -e 's/^\n//' ${PROBLEM_PATH}/answer.dat
 # caution ! ../_script
 ln -s ../${SCRIPT_PATH}/run.sh ${PROBLEM_PATH}/run.sh
 cp ${SCRIPT_PATH}/solution.py ${PROBLEM_PATH}
-mv $PROBLEM_NAME ${PROBLEM_PATH}/${PROBLEM_NAME}.html
+mv $TMP_PROBLEM_FILE ${PROBLEM_PATH}/${PROBLEM_NAME}.html
 

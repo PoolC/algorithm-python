@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROBLEM_NAME=`echo "$1" | tr [:lower:] [:upper:]`
-SAVE_PATH=./
+SAVE_PATH=./problems
 GITHUB_PATH=./_poolc
 SCRIPT_PATH=./_script
 PROBLEM_PATH=${SAVE_PATH}/`echo "${PROBLEM_NAME}" | tr [:upper:] [:lower:]`
