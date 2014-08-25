@@ -52,8 +52,8 @@ OUTPUT=${OUTPUT%%</pre>*}
 echo "${OUTPUT}" > ${PROBLEM_PATH}/answer.dat
 perl -pi -e 's/^\n//' ${PROBLEM_PATH}/answer.dat
 
-# caution ! ../_script
-ln -s ../${SCRIPT_PATH}/run.sh ${PROBLEM_PATH}/run.sh
+# FIXME to find relative path ../../_script
+ln -s ../../${SCRIPT_PATH}/run.sh ${PROBLEM_PATH}/run.sh
 cp ${SCRIPT_PATH}/solution.py ${PROBLEM_PATH}
 mv $TMP_PROBLEM_FILE ${PROBLEM_PATH}/${PROBLEM_NAME}.html
 
